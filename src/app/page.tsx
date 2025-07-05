@@ -1,7 +1,8 @@
 "use client";
 
+import { useTheme } from "./providers";
 import { useState } from "react";
-import { ConnectButton } from "@rainbow-me/rainbowkit";
+import Navbar from "./components/Navbar";
 
 const MOCK_TREE_NFTS = [
   { id: 1, name: "Ancient Oak", image: "/tree-1.png", stage: "Mature" },
@@ -10,7 +11,10 @@ const MOCK_TREE_NFTS = [
 ];
 
 export default function Home() {
-  const [isDark, setIsDark] = useState(false);
+  const { isDark } = useTheme();
+  const [waterTree, setWaterTree] = useState("");
+  const [viewDetails, setViewDetails] = useState("");
+
   return (
     <div
       className={`min-h-screen p-8 transition-colors ${
@@ -18,26 +22,7 @@ export default function Home() {
       }`}
     >
       <main className="max-w-6xl mx-auto">
-        <div className="flex justify-between items-right mb-12">
-          <h1
-            className={`text-4xl font-bold ${
-              isDark ? "text-white" : "text-gray-800"
-            }`}
-          >
-            Tree NFT Collection
-          </h1>
-          <button
-            onClick={() => setIsDark(!isDark)}
-            className={`px-6 py-3 rounded-lg font-medium transition-colors ${
-              isDark
-                ? "bg-yellow-500 text-gray-900 hover:bg-yellow-400"
-                : "bg-gray-800 text-white hover:bg-gray-700"
-            }`}
-          >
-            {isDark ? "☀️ Light" : "🌙 Dark"}
-          </button>
-          <ConnectButton />
-        </div>
+        <Navbar currentPage="home" />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {MOCK_TREE_NFTS.map((nft) => (
@@ -63,21 +48,31 @@ export default function Home() {
                   {nft.name}
                 </h3>
                 <p
-                  className={`mb-4 ${
+                  className={`mb-2 ${
                     isDark ? "text-gray-300" : "text-gray-600"
                   }`}
                 >
                   Stage: {nft.stage}
                 </p>
-                <div className="flex justify-between items-center">
-                  <span
-                    className={`text-sm ${
-                      isDark ? "text-gray-400" : "text-gray-500"
-                    }`}
+                <span
+                  className={`text-sm mb-4 block ${
+                    isDark ? "text-gray-400" : "text-gray-500"
+                  }`}
+                >
+                  NFT #{nft.id}
+                </span>
+
+                <div className="flex gap-2">
+                  <button
+                    className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors flex-1"
+                    onClick={() => setWaterTree("")}
                   >
-                    NFT #{nft.id}
-                  </span>
-                  <button className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-colors">
+                    Water The Tree
+                  </button>
+                  <button
+                    className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-colors flex-1"
+                    onClick={() => setViewDetails("")}
+                  >
                     View Details
                   </button>
                 </div>
