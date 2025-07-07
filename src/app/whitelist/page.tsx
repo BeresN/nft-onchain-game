@@ -2,6 +2,7 @@
 
 import { useTheme } from "../providers";
 import Navbar from "../components/Navbar";
+import WhitelistButton from "../components/WhitelistButton";
 
 export default function Whitelist() {
   const { isDark } = useTheme();
@@ -32,32 +33,7 @@ export default function Whitelist() {
               Sign up to get early access to mint your Tree NFT. Limited spots
               available!
             </p>
-            <form className="space-y-4">
-              <div>
-                <label
-                  className={`block text-sm font-medium mb-2 ${
-                    isDark ? "text-gray-300" : "text-gray-700"
-                  }`}
-                >
-                  Wallet Address
-                </label>
-                <input
-                  type="text"
-                  className={`w-full px-4 py-2 rounded-lg border transition-colors ${
-                    isDark
-                      ? "bg-gray-700 border-gray-600 text-white"
-                      : "bg-white border-gray-300 text-gray-900"
-                  }`}
-                  placeholder="0x..."
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
-              >
-                Join Whitelist
-              </button>
-            </form>
+            <WhitelistButton />
           </div>
         </div>
       </main>
