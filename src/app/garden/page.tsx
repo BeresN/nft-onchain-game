@@ -5,9 +5,30 @@ import { useState } from "react";
 import Navbar from "../components/Navbar";
 
 const MOCK_TREE_NFTS = [
-  { id: 1, name: "Ancient Oak", image: "/tree-1.png", stage: "Mature", lastWatered: "2 days ago", health: 85 },
-  { id: 2, name: "Young Maple", image: "/tree-2.png", stage: "Growing", lastWatered: "1 day ago", health: 92 },
-  { id: 3, name: "Elder Pine", image: "/tree-3.png", stage: "Ancient", lastWatered: "3 hours ago", health: 78 },
+  {
+    id: 1,
+    name: "Ancient Oak",
+    image: "/tree-1.png",
+    stage: "Mature",
+    lastWatered: "2 days ago",
+    health: 85,
+  },
+  {
+    id: 2,
+    name: "Young Maple",
+    image: "/tree-2.png",
+    stage: "Growing",
+    lastWatered: "1 day ago",
+    health: 92,
+  },
+  {
+    id: 3,
+    name: "Elder Pine",
+    image: "/tree-3.png",
+    stage: "Ancient",
+    lastWatered: "3 hours ago",
+    health: 78,
+  },
 ];
 
 export default function Garden() {
@@ -132,32 +153,16 @@ export default function Garden() {
                 {selectedTree.name}
               </h3>
               <div className="space-y-3 mb-6">
-                <p
-                  className={`${
-                    isDark ? "text-gray-300" : "text-gray-600"
-                  }`}
-                >
+                <p className={`${isDark ? "text-gray-300" : "text-gray-600"}`}>
                   <strong>Stage:</strong> {selectedTree.stage}
                 </p>
-                <p
-                  className={`${
-                    isDark ? "text-gray-300" : "text-gray-600"
-                  }`}
-                >
+                <p className={`${isDark ? "text-gray-300" : "text-gray-600"}`}>
                   <strong>Last Watered:</strong> {selectedTree.lastWatered}
                 </p>
-                <p
-                  className={`${
-                    isDark ? "text-gray-300" : "text-gray-600"
-                  }`}
-                >
+                <p className={`${isDark ? "text-gray-300" : "text-gray-600"}`}>
                   <strong>Health:</strong> {selectedTree.health}%
                 </p>
-                <p
-                  className={`${
-                    isDark ? "text-gray-300" : "text-gray-600"
-                  }`}
-                >
+                <p className={`${isDark ? "text-gray-300" : "text-gray-600"}`}>
                   <strong>NFT ID:</strong> #{selectedTree.id}
                 </p>
               </div>

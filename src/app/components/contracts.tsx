@@ -1,3 +1,3 @@
 export const WHITELIST_ADDRESS = process.env.NEXT_PUBLIC_WHITELIST_ADDRESS!;
 export const NFT_ADDRESS = process.env.NEXT_PUBLIC_NFT_ADDRESS!;
-export const TOKEN_ADDRESS = process.env.NEXT_PUBLIC_TOKEN_ADDRESS!;
+export const SEPOLIA_ADDRESS = process.env.NEXT_PUBLIC_SEPOLIA_ADDRESS!;
