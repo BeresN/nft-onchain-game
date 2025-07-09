@@ -42,8 +42,8 @@ export default function useUserNFTs({ userAddress }: UseUserNFTsProps) {
 
         const foundTokens: string[] = [];
 
-        // Check token IDs 1-100 (adjust range based on your collection)
-        // This is a simple approach - for production, consider using events or subgraphs
+        // Check token IDs 1-15 because there will be no more than 15 tokens
+
         for (
           let tokenId = 1;
           tokenId <= 15 && foundTokens.length < userBalance;
@@ -64,7 +64,6 @@ export default function useUserNFTs({ userAddress }: UseUserNFTsProps) {
               foundTokens.push(tokenId.toString());
             }
           } catch (err) {
-            // Token doesn't exist or error reading - skip
             continue;
           }
         }
