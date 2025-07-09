@@ -19,7 +19,7 @@ export default function Navbar({
     const isActive = currentPage === page;
     return `px-4 py-2 rounded-lg font-medium transition-colors ${
       isActive
-        ? "bg-blue-600 text-white"
+        ? "bg-green-600 text-white"
         : isDark
         ? "bg-gray-700 text-white hover:bg-gray-600"
         : "bg-white text-gray-800 hover:bg-gray-50"
