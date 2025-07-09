@@ -99,8 +99,8 @@ forge script script/TestnetDeploy.s.sol --rpc-url sepolia --broadcast
 ## 🎯 How to Play
 
 1. **Join Whitelist**: Get approved to mint your first tree NFT
-2. **Mint Tree**: Choose your preferred tree type and mint for 0.001 ETH
-3. **Water Regularly**: Pay 0.0004 ETH to water your tree (once per day)
+2. **Mint Tree**: Choose your preferred tree type and mint for 0.0001 ETH
+3. **Water Regularly**: Pay 0.00001 ETH to water your tree (once per day)
 4. **Watch Growth**: Trees evolve through stages based on age and care
 5. **Collect Variants**: Each growth stage creates a new NFT in your collection
 
