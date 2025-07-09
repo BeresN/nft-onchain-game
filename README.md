@@ -155,8 +155,8 @@ forge script script/TestnetDeploy.s.sol --rpc-url sepolia --broadcast
 ## 📊 Game Economics
 
 - **Mint Price**: 0.0001 ETH
-- **Watering Cost**: 0.00001 ETH
-- **Revival Cost**: 0.00005 ETH (5x watering cost)
+- **Watering Cost**: 0.0001 ETH
+- **Revival Cost**: 0.005 ETH (5x watering cost)
 - **Watering Cooldown**: 24 hours
 - **Wither Time**: 5 days without watering
 
