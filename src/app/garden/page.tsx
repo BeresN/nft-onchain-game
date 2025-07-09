@@ -17,7 +17,6 @@ export default function Garden() {
     setIsClient(true);
   }, []);
 
-  // Fetch user's NFTs from the contract
   const { userTokenIds, isLoading, error, balance } = useUserNFTs({
     userAddress: address || "",
   });
