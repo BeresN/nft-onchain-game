@@ -17,7 +17,7 @@ export default function Navbar({
 
   const getNavItemClass = (page: string) => {
     const isActive = currentPage === page;
-    return `px-4 py-2 rounded-lg font-medium transition-colors ${
+    return `px-3 py-2 rounded-lg font-medium transition-colors whitespace-nowrap ${
       isActive
         ? "bg-green-600 text-white"
         : isDark
@@ -29,14 +29,17 @@ export default function Navbar({
   return (
     <div className="flex justify-between items-center mb-12">
       <h1
-        className={`text-4xl font-bold ${
+        className={`text-4xl font-bold flex-1 ${
           isDark ? "text-white" : "text-gray-800"
         }`}
       >
         {title}
       </h1>
-      <div className="flex gap-4 items-center">
-        <nav className="flex gap-4">
+      <div className="flex gap-3 items-center flex-shrink-0">
+        <nav className="flex gap-2">
+          <Link href="/" className={getNavItemClass("home")}>
+            Homepage
+          </Link>
           <Link href="/whitelist" className={getNavItemClass("whitelist")}>
             Sign Up
           </Link>
@@ -47,17 +50,13 @@ export default function Navbar({
             Garden
           </Link>
         </nav>
+        <ConnectButton />
         <button
           onClick={() => setIsDark(!isDark)}
-          className={`px-6 py-3 rounded-lg font-medium transition-colors ${
-            isDark
-              ? "bg-yellow-500 text-gray-900 hover:bg-yellow-400"
-              : "bg-gray-800 text-white hover:bg-gray-700"
-          }`}
+          className={`px-2 py-2 rounded-lg font-medium transition-colors`}
         >
-          {isDark ? "☀️ Light" : "🌙 Dark"}
+          {isDark ? "☀️ " : "🌙 "}
         </button>
-        <ConnectButton />
       </div>
     </div>
   );
