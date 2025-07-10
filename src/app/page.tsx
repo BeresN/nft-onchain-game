@@ -35,6 +35,51 @@ export default function Home() {
             seasons and growth stages. Each tree is unique and changes based on
             your care and attention.
           </p>
+
+          {/* Testnet Notice */}
+          <div
+            className={`inline-block px-6 py-4 rounded-lg mb-8 ${
+              isDark
+                ? "bg-blue-900 border-blue-700"
+                : "bg-blue-50 border-blue-200"
+            } border-2`}
+          >
+            <div className="flex items-center gap-2 mb-2">
+              <span className="text-2xl">🧪</span>
+              <h3
+                className={`text-lg font-semibold ${
+                  isDark ? "text-blue-300" : "text-blue-700"
+                }`}
+              >
+                Demo on Sepolia Testnet
+              </h3>
+            </div>
+            <p
+              className={`text-sm ${
+                isDark ? "text-blue-200" : "text-blue-600"
+              }`}
+            >
+              This app is deployed on Sepolia testnet for demonstration
+              purposes.
+            </p>
+            <p
+              className={`text-sm mt-2 ${
+                isDark ? "text-blue-200" : "text-blue-600"
+              }`}
+            >
+              <strong>To try it out:</strong> Connect your wallet, get free
+              Sepolia ETH from a{" "}
+              <a
+                href="https://cloud.google.com/application/web3/faucet/ethereum/sepolia"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:no-underline"
+              >
+                faucet
+              </a>
+              , then join the whitelist to mint your first tree NFT!
+            </p>
+          </div>
         </div>
 
         {/* Features Section */}

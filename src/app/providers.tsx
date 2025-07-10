@@ -56,7 +56,9 @@ function RainbowKitWrapper({ children }: { children: ReactNode }) {
 // Create wagmi config with RainbowKit
 const projectId = process.env.NEXT_PUBLIC_REOWN_PROJECT_ID;
 if (!projectId) {
-  throw new Error("NEXT_PUBLIC_REOWN_PROJECT_ID is not set. Please add it to your environment variables.");
+  throw new Error(
+    "NEXT_PUBLIC_REOWN_PROJECT_ID is not set. Please add it to your environment variables."
+  );
 }
 
 const config = getDefaultConfig({
