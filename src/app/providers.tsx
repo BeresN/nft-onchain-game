@@ -54,9 +54,14 @@ function RainbowKitWrapper({ children }: { children: ReactNode }) {
 }
 
 // Create wagmi config with RainbowKit
+const projectId = process.env.NEXT_PUBLIC_REOWN_PROJECT_ID;
+if (!projectId) {
+  throw new Error("NEXT_PUBLIC_REOWN_PROJECT_ID is not set. Please add it to your environment variables.");
+}
+
 const config = getDefaultConfig({
   appName: "Tree NFT Game",
-  projectId: process.env.NEXT_PUBLIC_REOWN_PROJECT_ID!,
+  projectId,
   chains: [sepolia, mainnet],
   transports: {
     [sepolia.id]: http(process.env.NEXT_PUBLIC_ALCHEMY_SEPOLIA_API),

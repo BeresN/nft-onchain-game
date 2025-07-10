@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { useAccount, useWriteContract, useReadContract } from "wagmi";
+import { useWriteContract, useReadContract } from "wagmi";
 import { useConfig } from "wagmi";
 import { waitForTransactionReceipt } from "wagmi/actions";
 import whitelistAbi from "../../../abis/whitelistAbi.json";
@@ -33,7 +33,6 @@ export default function WhitelistButton() {
 
   const { data: hash, isPending, writeContractAsync } = useWriteContract();
 
-  // Check if address is whitelisted
   const { data: isWhitelisted } = useReadContract({
     address: WHITELIST_ADDRESS as `0x${string}`,
     abi: whitelistAbi,

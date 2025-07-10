@@ -31,7 +31,8 @@ export default function Whitelist() {
             </h2>
             <p className={`mb-6 ${isDark ? "text-gray-300" : "text-gray-600"}`}>
               Sign up to get early access to mint your Tree NFT. Limited spots
-              available!
+              available! If whitelist is already full you can mint your nft for
+              higher price.
             </p>
             <WhitelistButton />
           </div>

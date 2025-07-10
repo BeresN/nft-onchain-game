@@ -1,9 +1,7 @@
 "use client";
-import { useState } from "react";
-import { useWriteContract, useReadContract } from "wagmi";
+import { useWriteContract } from "wagmi";
 import { useConfig } from "wagmi";
 import { waitForTransactionReceipt } from "wagmi/actions";
-import { getAccount } from "wagmi/actions";
 
 import nftAbi from "../../../abis/growthStagesAbi.json";
 
@@ -11,15 +9,10 @@ import { NFT_ADDRESS } from "./contracts";
 
 interface WateringButtonProps {
   tokenId: string;
-  onWateringComplete?: () => void;
 }
 
-export default function WateringButton({
-  tokenId,
-  onWateringComplete,
-}: WateringButtonProps) {
+export default function WateringButton({ tokenId }: WateringButtonProps) {
   const config = useConfig();
-  const account = getAccount(config);
   const { data: hash, isPending, writeContractAsync } = useWriteContract();
 
   async function handleWatering() {
@@ -37,7 +30,6 @@ export default function WateringButton({
       });
 
       console.log("Tree Water:", transactionReceipt);
-      onWateringComplete?.();
     } catch (err) {
       console.log("failed to water the tree: ", err);
     }
