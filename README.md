@@ -4,7 +4,7 @@ A dynamic NFT collection where users can mint, nurture, and grow unique tree NFT
 
 
 ## 🎮 Try it out
-https://nft-onchain-game.vercel.app/
+nft-onchain-game-production.up.railway.app
 
 ## 🎮 Game Features
 
