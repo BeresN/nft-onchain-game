@@ -2,6 +2,10 @@
 
 A dynamic NFT collection where users can mint, nurture, and grow unique tree NFTs through different growth stages. Each tree evolves based on user interaction and time, creating a gamified experience entirely on-chain.
 
+
+## 🎮 Try it out
+https://nft-onchain-game.vercel.app/
+
 ## 🎮 Game Features
 
 ### Core Gameplay
