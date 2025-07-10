@@ -108,54 +108,6 @@ forge script script/TestnetDeploy.s.sol --rpc-url sepolia --broadcast
 4. **Watch Growth**: Trees evolve through stages based on age and care
 5. **Collect Variants**: Each growth stage creates a new NFT in your collection
 
-## 📱 Application Pages
-
-### Home Page (`/`)
-
-- Landing page with project overview
-- Feature highlights and gameplay explanation
-- Call-to-action buttons
-
-### Whitelist Page (`/whitelist`)
-
-- Whitelist registration form
-- Status checking for approved addresses
-
-### Mint Page (`/mint`)
-
-- Tree type selection interface
-- Minting functionality with wallet integration
-- Transaction status and confirmation
-
-### Garden Page (`/garden`)
-
-- Personal NFT collection viewer
-- Individual tree details and statistics
-- Watering and care actions
-
-## 🔧 Smart Contract Architecture
-
-### Core Contracts
-
-#### `TreeNFTCollection.sol`
-
-- Base ERC721 implementation
-- Minting logic with whitelist verification
-- Tree data storage and management
-- Dynamic metadata URI generation
-
-#### `TreeGrowthStages.sol` (inherits TreeNFTCollection)
-
-- Watering mechanics and cooldown system
-- Growth stage calculation algorithms
-- Tree evolution and new token minting
-- Wither detection and revival system
-
-#### `Whitelist.sol`
-
-- Address approval system for minting
-- Owner-controlled whitelist management
-
 ## 📊 Game Economics
 
 - **Mint Price**: 0.0001 ETH
